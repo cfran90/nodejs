@@ -7,7 +7,6 @@ import Groups from "../models/groups";
 class UserController {
 
     async index(req, res) {
-        console.log("USERSSSSS - FINDALL")
         const users = await User.findAll({
             include: [{
                 model: Files,
@@ -77,7 +76,7 @@ class UserController {
             userCreated.setGroups(list)
         });
 
-        user.add
+        // user.add
         // voltar apenas alguns dados:
         // const {name, email} = User.create...
         // res.json({name, email});

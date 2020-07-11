@@ -24,6 +24,9 @@ routes.post('/sessions', SessionController.store);
 
 // GROUPS
 routes.get('/groups', GroupController.index);
+routes.get('/groups/:id', GroupController.findById);
+routes.post('/groups/:id/save-permission', GroupController.saveGroupPermission);
+routes.post('/groups/:id/remove-permission', GroupController.removeGroupPermission);
 routes.post('/groups', GroupController.store);
 
 // PERMISSIONS
